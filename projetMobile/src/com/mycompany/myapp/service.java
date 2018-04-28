@@ -24,7 +24,7 @@ public class service {
     }
     public void ajoutUser(User ta) {
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost:8888/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/ajoutUser/" + ta.getUsername() + "/" + ta.getEmail()+ "/" + ta.getPassword();
+        String Url = "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/ajoutUser/" + ta.getUsername() + "/" + ta.getEmail()+ "/" + ta.getPassword();
         con.setUrl(Url);
 
         System.out.println("tt");
@@ -39,7 +39,7 @@ public class service {
     public ArrayList<User> log(User ta) {
          ArrayList<User> listTasks = new ArrayList<>();
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost:8888/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/log/" + ta.getUsername() + "/" + ta.getPassword();
+        String Url = "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/log/" + ta.getUsername() + "/" + ta.getPassword();
         con.setUrl(Url);
 
         System.out.println("tt");
