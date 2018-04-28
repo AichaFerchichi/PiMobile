@@ -5,7 +5,7 @@
  */
 package com.mycompany.gui;
 
-import com.mycompany.service.ServiceOffresBabysitter;
+import com.mycompany.service.OffresBabysitterService;
 import com.mycompany.entity.Offre;
 import com.codename1.components.FloatingHint;
 import com.codename1.components.ImageViewer;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
  *
  * @author pc
  */
-public class AffichageOffresBaby {
+public class AffichageOffresBabyForm {
     Form f;
     SpanLabel lb;
     EncodedImage enc;
@@ -34,12 +34,12 @@ public class AffichageOffresBaby {
     Resources theme;
 
   
-    public AffichageOffresBaby() {
+    public AffichageOffresBabyForm() {
     
         f = new Form("Les profils des babysitters");
         lb = new SpanLabel("");
      
-        ServiceOffresBabysitter serviceOffre=new ServiceOffresBabysitter();
+        OffresBabysitterService serviceOffre=new OffresBabysitterService();
         ArrayList<Offre> lis=serviceOffre.getList2();
                                  Container exp = new Container(BoxLayout.y());   
 f.add(exp);

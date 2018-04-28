@@ -1,4 +1,4 @@
-package com.mycompany.myapp;
+package com.mycompany.gui;
 
 /*
  * Copyright (c) 2016, Codename One
@@ -20,6 +20,7 @@ package com.mycompany.myapp;
  */
 
 
+import com.mycompany.service.UserService;
 import com.codename1.components.FloatingHint;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -85,7 +86,7 @@ public class SignUpForm extends BaseForm {
         next.addActionListener(e ->{
            
          User user=new User(username.getText(),email.getText(),password.getText());
-               service serviceTask=new service();
+               UserService serviceTask=new UserService();
                serviceTask.ajoutUser(user);
         });
     }
