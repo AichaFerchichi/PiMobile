@@ -20,7 +20,7 @@ import java.util.Map;
  *
  * @author pc
  */
-public class ServiceOffresBabysitter {
+public class OffresBabysitterService {
     
     public ArrayList<Offre> getList2() {
         ArrayList<Offre> listTasks = new ArrayList<>();

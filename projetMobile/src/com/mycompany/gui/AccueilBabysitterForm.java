@@ -15,13 +15,13 @@ import com.codename1.ui.layouts.BoxLayout;
  *
  * @author pc
  */
-public class AccueilBabysitter {
+public class AccueilBabysitterForm {
       Form f;
       SpanLabel lb;
       Button btn1;
       Button btn2;
       Container ctn;
-    public AccueilBabysitter() {
+    public AccueilBabysitterForm() {
    f = new Form();
    lb = new SpanLabel("Vous étes ?");
    btn1=new Button("Parent");

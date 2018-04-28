@@ -1,7 +1,8 @@
-package com.mycompany.myapp;
+package com.mycompany.gui;
 
 
 
+import com.mycompany.service.UserService;
 import com.codename1.components.FloatingHint;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -51,7 +52,7 @@ public class SignInForm extends BaseForm {
         signIn.requestFocus();
        signIn.addActionListener(e ->{
                 User user=new User(username.getText(),password.getText());
-               service serviceTask=new service();
+               UserService serviceTask=new UserService();
                
      ArrayList<User> lis=serviceTask.log(user);
        for ( User  us : lis) {
