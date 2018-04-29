@@ -54,11 +54,15 @@ public class UserService {
                         System.out.println(obj);
                         User task = new User();
                         
-                        
+                        float id = Float.parseFloat(obj.get("id").toString());
+
                        
                        
                         task.setUsername(obj.get("username").toString());
                           task.setPassword(obj.get("password").toString());
+                           task.setId((int) id);
+
+
                         listTasks.add(task);
 
                     }
