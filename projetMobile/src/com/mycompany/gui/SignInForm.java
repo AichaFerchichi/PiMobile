@@ -12,13 +12,14 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.mycompany.entity.User;
 import java.util.ArrayList;
 
 
 public class SignInForm extends BaseForm {
-
+ private Resources theme;
     public SignInForm(Resources res) {
         super(new BorderLayout());
         
@@ -57,10 +58,12 @@ public class SignInForm extends BaseForm {
      ArrayList<User> lis=serviceTask.log(user);
        for ( User  us : lis) {
             if(us!=null)
-              new AffichageForm().show();
+            {
+               theme = UIManager.initFirstTheme("/theme");
+            AffichageGarderieForm aff=new AffichageGarderieForm(theme);
+            aff.getF().show();}
+              
        }
-                
-            
                 
         });
     }
