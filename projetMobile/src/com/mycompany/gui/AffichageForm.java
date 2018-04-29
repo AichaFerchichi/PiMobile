@@ -10,7 +10,10 @@ import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.util.Resources;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +26,28 @@ import java.util.Map;
 public class AffichageForm  extends BaseForm {
  Form f;
     SpanLabel lb;
-    public AffichageForm() {
-         
-        f = new Form();
+   
+    public AffichageForm(Resources res) {
+        
+       /* Button bt = new Button("button");
+        Container content = BoxLayout.encloseY(
+               
+                bt     
+        );
+         add(BorderLayout.NORTH, content);
+        bt.requestFocus();*/
+        super(new BorderLayout());
+        if(!Display.getInstance().isTablet()) {
+            BorderLayout bl = (BorderLayout)getLayout();
+            bl.defineLandscapeSwap(BorderLayout.NORTH, BorderLayout.EAST);
+            bl.defineLandscapeSwap(BorderLayout.SOUTH, BorderLayout.CENTER);
+        }
+        getTitleArea().setUIID("Container");
+     
+      setUIID("SignIn");
+        
+      
+    
        
         
         
@@ -37,3 +59,9 @@ public class AffichageForm  extends BaseForm {
      
        
 }
+
+   
+    
+     
+       
+
