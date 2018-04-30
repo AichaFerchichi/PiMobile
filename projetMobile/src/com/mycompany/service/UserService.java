@@ -22,9 +22,9 @@ public class UserService {
 
     public UserService() {
     }
-    public void ajoutUser(User ta) {
+     public void ajoutUser(User ta) {
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/ajoutUser/" + ta.getUsername() + "/" + ta.getEmail()+ "/" + ta.getPassword();
+        String Url = "http://localhost:8888/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/ajoutUser/" + ta.getUsername() + "/" + ta.getEmail()+ "/" + ta.getPassword();
         con.setUrl(Url);
 
         System.out.println("tt");
@@ -39,7 +39,7 @@ public class UserService {
     public ArrayList<User> log(User ta) {
          ArrayList<User> listTasks = new ArrayList<>();
         ConnectionRequest con = new ConnectionRequest();
-        String Url = "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/log/" + ta.getUsername() + "/" + ta.getPassword();
+        String Url = "http://localhost:8888/houfinal/Utopia/projetSymfonyPIDEV/web/app_dev.php/log/" + ta.getUsername() + "/" + ta.getPassword();
         con.setUrl(Url);
 
         System.out.println("tt");
@@ -54,11 +54,15 @@ public class UserService {
                         System.out.println(obj);
                         User task = new User();
                         
-                        
+                        float id = Float.parseFloat(obj.get("id").toString());
+
                        
                        
                         task.setUsername(obj.get("username").toString());
                           task.setPassword(obj.get("password").toString());
+                           task.setId((int) id);
+
+
                         listTasks.add(task);
 
                     }
