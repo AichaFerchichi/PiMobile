@@ -10,6 +10,7 @@ import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.io.Log;
 import com.codename1.ui.Toolbar;
+import com.mycompany.gui.CovoiturageForm;
 import java.io.IOException;
 
 /**
@@ -36,7 +37,8 @@ public class MyApplication {
             current.show();
             return;
         }
-         new SignInForm(theme).show();
+        new CovoiturageForm().getF().show();
+        // new SignInForm(theme).show();
     }
 
     public void stop() {
