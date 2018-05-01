@@ -2,6 +2,7 @@
 
 <resource majorVersion="1" minorVersion="7" useXmlUI="false">
     <image name="backgroundMobile.jpg"  />
+    <image name="imencov.PNG"  />
     <image name="logoo.png"  />
     <image name="news-tab-down.png" type="multi"  />
     <theme name="Theme">

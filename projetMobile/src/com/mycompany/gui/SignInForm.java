@@ -20,7 +20,11 @@ import java.util.ArrayList;
 
 
 public class SignInForm extends BaseForm {
+<<<<<<< HEAD
+private Resources theme;
+=======
  private Resources theme;
+>>>>>>> 929af69863b83799929874e527b7e8ff67b8f869
     public SignInForm(Resources res) {
         super(new BorderLayout());
         
@@ -53,11 +57,22 @@ public class SignInForm extends BaseForm {
         add(BorderLayout.SOUTH, content);
         signIn.requestFocus();
        signIn.addActionListener(e ->{
-                User user=new User(username.getText(),password.getText());
+          User user=new User(username.getText(),password.getText());
                UserService serviceTask=new UserService();
                
-     ArrayList<User> lis=serviceTask.log(user);
+     ArrayList<User> lis=serviceTask.log(user); 
        for ( User  us : lis) {
+<<<<<<< HEAD
+        if(us!=null){
+                                   User.setIdUserConnected(us.getId());
+
+              theme = UIManager.initFirstTheme("/theme");
+
+              new AccueilBabysitterForm(theme).show(); }
+
+       }
+
+=======
             if(us!=null)
             {
                theme = UIManager.initFirstTheme("/theme");
@@ -66,6 +81,7 @@ public class SignInForm extends BaseForm {
             
               
        }
+>>>>>>> 929af69863b83799929874e527b7e8ff67b8f869
                 
         });
     }

@@ -55,9 +55,19 @@ public class UserService {
                     for (Map<String, Object> obj : list) {
                         System.out.println(obj);
                         User task = new User();
+<<<<<<< HEAD
+=======
+                        
+                        float id = Float.parseFloat(obj.get("id").toString());
+
+                       
+>>>>>>> 5e49fb150a9b2d404107072aa88b89a7d993e0ef
                        
                         task.setUsername(obj.get("username").toString());
                           task.setPassword(obj.get("password").toString());
+                           task.setId((int) id);
+
+
                         listTasks.add(task);
 
                     }}
