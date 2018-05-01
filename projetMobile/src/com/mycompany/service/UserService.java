@@ -9,6 +9,7 @@ import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Dialog;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,18 +51,19 @@ public class UserService {
                     Map<String, Object> tasks = jsonp.parseJSON(new CharArrayReader(new String(con.getResponseData()).toCharArray()));
                     System.out.println(tasks);
                     List<Map<String, Object>> list = (List<Map<String, Object>>) tasks.get("root");
+                    if(list!=null){
                     for (Map<String, Object> obj : list) {
                         System.out.println(obj);
                         User task = new User();
-                        
-                        
-                       
                        
                         task.setUsername(obj.get("username").toString());
                           task.setPassword(obj.get("password").toString());
                         listTasks.add(task);
 
-                    }
+                    }}
+                    else{
+                    Dialog.show("Invalide", "Vérifiez vos paramètres ", "OK", "Cancel");
+            }
                 } catch (IOException ex) {
                 }
         });

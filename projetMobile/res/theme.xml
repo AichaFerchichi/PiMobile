@@ -87,7 +87,7 @@
         <val key="Form.transparency" value="255" />
         <val key="ImageOverlay.bgColor" value="14134b" />
         <val key="ImageOverlay.transparency" value="60" />
-        <val key="Label.fgColor" value="ff00ff" />
+        <val key="Label.fgColor" value="0" />
         <font key="Label.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="2.5" />
         <val key="Label.transparency" value="0" />
         <val key="LargeWhiteText.align" value="1" />
@@ -123,7 +123,7 @@
         <val key="MenuButton.sel#padding" value="2,2,2,2" />
         <val key="MenuButton.sel#transparency" value="0" />
         <val key="MenuButton.transparency" value="0" />
-        <val key="NewsBottomLine.fgColor" value="ff00ff" />
+        <val key="NewsBottomLine.fgColor" value="0" />
         <font key="NewsBottomLine.font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="1.5" />
         <val key="NewsBottomLine.press#fgColor" value="a2a1b8" />
         <font key="NewsBottomLine.press#font" type="ttf" face="0" style="0" size="0" name="native:MainLight" family="native:MainLight" sizeSettings="3" actualSize="1.5" />
@@ -306,7 +306,7 @@
         <val key="WelcomeNoteArea.padUnit" value="2,2,2,2" />
         <val key="WelcomeNoteArea.padding" value="5,5,0,0" />
         <val key="WelcomeNoteArea.transparency" value="255" />
-        <val key="WhiteSeparator.bgColor" value="ffffff" />
+        <val key="WhiteSeparator.bgColor" value="0" />
         <val key="WhiteSeparator.margin" value="0,0,0,0" />
         <val key="WhiteSeparator.padding" value="1,1,1,1" />
         <val key="WhiteSeparator.transparency" value="26" />
