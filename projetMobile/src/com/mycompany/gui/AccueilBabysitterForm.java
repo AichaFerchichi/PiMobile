@@ -62,7 +62,11 @@ public class AccueilBabysitterForm extends BaseForm{
    
     btn1.addActionListener(e ->{
                
+<<<<<<< HEAD
                    new AffichageForm(theme).show();      
+=======
+                   new AffichageForm(theme).show();
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
       
         });
 
@@ -82,7 +86,13 @@ public class AccueilBabysitterForm extends BaseForm{
 
            }
            else {
+<<<<<<< HEAD
                        new  AffichageForm(theme).show();      
+=======
+               theme = UIManager.initFirstTheme("/theme");
+                       new AjouterOffreBabysitter(theme).show();  
+                       break;
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
 
             
        }

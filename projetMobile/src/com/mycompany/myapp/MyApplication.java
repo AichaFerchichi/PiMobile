@@ -10,6 +10,7 @@ import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import com.codename1.io.Log;
 import com.codename1.ui.Toolbar;
+import com.mycompany.gui.AjouterOffreBabysitter;
 import com.mycompany.gui.CovoiturageForm;
 import java.io.IOException;
 
@@ -37,12 +38,19 @@ public class MyApplication {
             current.show();
             return;
         }
+<<<<<<< HEAD
 
        // new CovoiturageForm().getF().show();
       
 
           new SignInForm(theme).show();
 
+=======
+       // new CovoiturageForm().getF().show();
+        // new SignInForm(theme).show();
+         new SignInForm(theme).show();
+      // new AjouterOffreBabysitter(theme).show();
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
     }
 
     public void stop() {

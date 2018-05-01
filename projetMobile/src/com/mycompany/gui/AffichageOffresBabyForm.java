@@ -26,49 +26,77 @@ import java.util.ArrayList;
  *
  * @author pc
  */
-public class AffichageOffresBabyForm {
+public class AffichageOffresBabyForm extends BaseForm {
     Form f;
     SpanLabel lb;
     EncodedImage enc;
     URLImage uRLImage;
     Resources theme;
-
   
-    public AffichageOffresBabyForm() {
-    
-        f = new Form("Les profils des babysitters");
+    public AffichageOffresBabyForm(Resources res) {
+     super(new BorderLayout());
+       
+        f = new Form("Les offres de travail");
+      
+                   
         lb = new SpanLabel("");
      
         OffresBabysitterService serviceOffre=new OffresBabysitterService();
         ArrayList<Offre> lis=serviceOffre.getList2();
-                                 Container exp = new Container(BoxLayout.y());   
-f.add(exp);
+                                 
+                                 Container c1=new Container(BoxLayout.y());
+                                  
+                                 f.add(c1);
          for (Offre o : lis) {
+               Container exp = new Container(BoxLayout.y());
+               Container c2 = new Container(BoxLayout.x());
+           theme = UIManager.initFirstTheme("/theme");
+                     enc=EncodedImage.createFromImage(theme.getImage("logoo.png"), false);
+        uRLImage=URLImage.createToStorage(enc,o.getImage(), "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/ressources/" + o.getImage(),URLImage.RESIZE_SCALE_TO_FILL);
+                             uRLImage.fetch();
+
+         ImageViewer imgV=new ImageViewer(uRLImage);
+        
+                c2.add(imgV)  ;         
+                imgV.addPointerPressedListener(e ->{
+                 theme = UIManager.initFirstTheme("/theme");
+                new AffichageForm(theme).show();
+                });
+                /*
+                                TextArea desc5 = new TextArea(o.getNom());
+                desc5.setUIID("TextFieldBlack");
+                desc5.setEditable(false);
+                 TextArea email = new TextArea(o.getEmail());
+                email.setUIID("TextFieldBlack");
+                email.setEditable(false);
                TextArea desc = new TextArea(o.getDescription());
                 desc.setUIID("TextFieldBlack");
                 desc.setEditable(false);
                 TextArea desc2 = new TextArea(o.getAdresse());
                 desc2.setUIID("TextFieldBlack");
                 desc2.setEditable(false);
-                TextArea desc3 = new TextArea(o.getExperience());
-                desc3.setUIID("TextFieldBlack");
-                desc3.setEditable(false);
-                 addStringValue( "Description: ",desc,exp);
-                 addStringValue( "Adresse: ",desc2,exp);
-                 addStringValue( "Experience: ",desc3,exp);
-                         theme = UIManager.initFirstTheme("/theme");
-                  
-      enc=EncodedImage.createFromImage(theme.getImage("round.png"), false);
-        uRLImage=URLImage.createToStorage(enc, "test", "http://localhost/houfinal/Utopia/projetSymfonyPIDEV/web/ressources/" + o.getImage(),URLImage.RESIZE_SCALE_TO_FILL);
-                             uRLImage.fetch();
-
-         ImageViewer imgV=new ImageViewer(uRLImage);
-        Container c=new Container();
-     c.add(imgV);
-                                addStringValue( " ",c,exp);
-     
+                addStringValue("", desc5,exp);
+                addStringValue( "",email,exp);
+                
+                 addStringValue( "",desc,exp);
+                 addStringValue( "",desc2,exp);
+       
+        */
+        
+     c2.add(exp)  ;
+     c1.add(c2);
+ Label bt = new Label("plus");
+       
+             bt.addPointerPressedListener(e ->{
+                 theme = UIManager.initFirstTheme("/theme");
+             //    System.out.println("iddddd"+o.getIdGarderie());
+              //   DetailForm dt=new DetailForm(theme,o.getIdGarderie());
+               //dt.getF().show();
+                }); c1.add(bt);
                     }
-                  
+            
+     
+     f.setUIID("SignIn");    
               
         
          }

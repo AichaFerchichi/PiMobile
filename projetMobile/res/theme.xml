@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<resource majorVersion="1" minorVersion="7" useXmlUI="false">
+<resource majorVersion="1" minorVersion="9" useXmlUI="false">
     <image name="backgroundMobile.jpg"  />
     <image name="imencov.PNG"  />
     <image name="logoo.png"  />
@@ -308,8 +308,13 @@
         <val key="WelcomeNoteArea.padding" value="5,5,0,0" />
         <val key="WelcomeNoteArea.transparency" value="255" />
         <val key="WhiteSeparator.bgColor" value="0" />
+<<<<<<< HEAD
+        <val key="WhiteSeparator.margin" value="0.0,0.0,0.0,0.0" />
+        <val key="WhiteSeparator.padding" value="1.0,1.0,1.0,1.0" />
+=======
         <val key="WhiteSeparator.margin" value="0,0,0,0" />
         <val key="WhiteSeparator.padding" value="1,1,1,1" />
+>>>>>>> cff363a6196ad468082017928160dd1c0bb547f2
         <val key="WhiteSeparator.transparency" value="26" />
         <val key="transparency" value="0" />
     </theme>

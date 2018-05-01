@@ -20,11 +20,17 @@ import java.util.ArrayList;
 
 
 public class SignInForm extends BaseForm {
+<<<<<<< HEAD
 
 private Resources theme;
 
 
     public SignInForm(Resources res) {
+=======
+private Resources theme;
+
+public SignInForm(Resources res) {
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
         super(new BorderLayout());
         
         if(!Display.getInstance().isTablet()) {
@@ -61,7 +67,10 @@ private Resources theme;
                
      ArrayList<User> lis=serviceTask.log(user); 
        for ( User  us : lis) {
+<<<<<<< HEAD
 /*
+=======
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
         if(us!=null){
                                    User.setIdUserConnected(us.getId());
 
@@ -69,18 +78,30 @@ private Resources theme;
 
               new AccueilBabysitterForm(theme).show(); }
 
+<<<<<<< HEAD
        }
 */
 
+=======
+       
+/*
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
             if(us!=null)
             {
                theme = UIManager.initFirstTheme("/theme");
             AffichageGarderieForm aff=new AffichageGarderieForm(theme);
             aff.getF().show();}
+<<<<<<< HEAD
+         */     
+=======
             
               
+>>>>>>> cff363a6196ad468082017928160dd1c0bb547f2
        }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8113dd46157c936eac31830afe757fbd0324b96
                 
         });
     }
