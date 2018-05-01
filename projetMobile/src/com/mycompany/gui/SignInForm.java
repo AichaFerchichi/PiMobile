@@ -6,6 +6,7 @@ import com.mycompany.service.UserService;
 import com.codename1.components.FloatingHint;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextField;
@@ -43,7 +44,7 @@ public SignInForm(Resources res) {
         Label doneHaveAnAccount = new Label("Don't have an account?");
         Container content = BoxLayout.encloseY(
                 new FloatingHint(username),
-                createLineSeparator(),
+                 createLineSeparator(),
                 new FloatingHint(password),
                 createLineSeparator(),
                 signIn,
@@ -72,7 +73,12 @@ public SignInForm(Resources res) {
                theme = UIManager.initFirstTheme("/theme");
             AffichageGarderieForm aff=new AffichageGarderieForm(theme);
             aff.getF().show();}
+<<<<<<< HEAD
          */     
+=======
+            
+              
+>>>>>>> cff363a6196ad468082017928160dd1c0bb547f2
        }
                 
         });
