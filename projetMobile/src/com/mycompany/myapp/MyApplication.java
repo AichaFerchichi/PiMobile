@@ -37,12 +37,12 @@ public class MyApplication {
             current.show();
             return;
         }
-<<<<<<< HEAD
-        new CovoiturageForm().getF().show();
-        // new SignInForm(theme).show();
-=======
+
+       // new CovoiturageForm().getF().show();
+      
+
           new SignInForm(theme).show();
->>>>>>> b919526af81494ede9112283991c5f14df45de6f
+
     }
 
     public void stop() {
